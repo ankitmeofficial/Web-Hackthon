@@ -5,6 +5,7 @@ import { generateMedicalReport } from './reportController.js';
 
 const chatSessions = new Map(); // In-memory store for active chats
 
+// yaha se chats start hoga  
 export default {
   async startNewChat(req, res) {
     const sessionId = Date.now().toString();
@@ -85,3 +86,4 @@ export default {
     res.redirect(`/reports/${savedReport.patientId}`);
   }
 };
+
