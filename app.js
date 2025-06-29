@@ -10,8 +10,6 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-
-
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -23,10 +21,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/patients', patientRoutes); // Patient list and details
 app.use('/reports', reportRoutes); // Report viewing
 app.use('/', chatRoutes); // Main chat interface - this should be last
-
-// Make sure this comes AFTER other middleware but BEFORE error handlers
-// app.use('/patients', patientRoutes);  
-// app.use('/reports', reportRoutes);    
 
 // Error handling middleware
 app.use((err, req, res, next) => {
