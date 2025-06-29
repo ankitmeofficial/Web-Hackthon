@@ -1,0 +1,23 @@
+=== ESSENTIAL PRE-VISIT SUMMARY ===
+
+Patient: [Name]
+Date: 6/29/2025
+
+────────────────────────────────────
+
+PRIMARY CONCERNS:
+• form 2 day age and also cough  have
+
+SYMPTOMS:
+• pain in  stomach
+
+RELEVANT HISTORY:
+- [CLINICIAN NOTE] Thank you, Ankit.
+
+Next, I need to ask about your medical history. Do you have any existing medical conditions that you're aware of, such as diabetes, high blood pressure, or asthma? And do you have any allergies, for example, to medications or certain foods?
+
+────────────────────────────────────
+END OF ESSENTIAL SUMMARY
+
+
+

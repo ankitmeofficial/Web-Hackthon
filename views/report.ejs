@@ -1,0 +1,37 @@
+<%- include('../partials/header', { title: `Medical Report - ${report.patientName}` }) %>
+
+<div class="container mx-auto px-4 py-8">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold">
+      <%= report.patientName %> 
+      <span class="text-gray-500 text-lg">(<%= report.patientId %>)</span>
+    </h1>
+    <a href="/patients" class="text-blue-600 hover:text-blue-800">← Back to Patients</a>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6 mb-6">
+    <h2 class="text-xl font-semibold mb-4">Generated Report</h2>
+    <div class="prose max-w-none">
+      <pre class="whitespace-pre-wrap"><%= report.reportText %></pre>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-semibold mb-4">Full Conversation</h2>
+    <div class="space-y-4">
+      <% report.conversation.forEach(entry => { %>
+        <div class="<%= entry.role === 'user' ? 'bg-blue-50' : 'bg-green-50' %> p-3 rounded">
+          <strong class="<%= entry.role === 'user' ? 'text-blue-600' : 'text-green-600' %>">
+            <%= entry.role === 'user' ? 'PATIENT' : 'DR. CUPPER' %>:
+          </strong>
+          <%= entry.parts[0].text %>
+          <div class="text-xs text-gray-500 mt-1">
+            <%= new Date(entry.timestamp).toLocaleString() %>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Medical Clinic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <nav class="bg-blue-600 text-white shadow-lg">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center space-x-4">
+                    <h1 class="text-xl font-bold">🏥 Virtual Medical Clinic</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="/" class="hover:text-blue-200 transition-colors">Home</a>
+                    <a href="/new" class="bg-blue-700 px-4 py-2 rounded-lg hover:bg-blue-800 transition-colors">New Consultation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- for list of pacents  -->
+     <nav class="bg-white shadow mb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <div class="flex">
+        <div class="flex-shrink-0 flex items-center">
+          <span class="text-xl font-bold">Medical Portal</span>
+        </div>
+      </div>
+      <div class="flex items-center">
+        <a href="/patients" class="px-3 py-2 rounded-md text-sm font-medium text-gray-700 hover:text-gray-900">
+          Patient List
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+    <main>
+
